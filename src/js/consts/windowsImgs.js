@@ -1,0 +1,1 @@
+const WINDOWS = [require('@/img/modal_calc/type1.png'), require('@/img/modal_calc/type2.png'), require('@/img/modal_calc/type3.png'), require('@/img/modal_calc/type4.png')];

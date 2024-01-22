@@ -1,0 +1,848 @@
+header.header
+	.container
+		.row
+			.col-md-5.col-sm-3.col-xs-12
+				.logo
+					.logo_img
+						img(src=require('../assets/img/header/logo.png') alt='#')
+					p Остекление балконов и лоджий
+			.col-md-2.col-sm-3.col-xs-12
+				.header_btn_wrap
+					.header_btn_wrap_block
+						button.header_btn.text-uppercase.text-left.popup_engineer_btn
+							| Вызвать 
+							br
+							| замерщика
+			.col-md-2.col-sm-3.col-xs-6.text-left
+				.working_hours
+					.working_hours_img
+						img(src=require('../assets/img/header/clock.png') alt='#')
+					p
+						| без выходных 
+						span 9:00 - 18:00
+			.col-md-3.col-sm-3.col-xs-6
+				.contact_us
+					.contact_us_wrap
+						a(href='#')
+							img(src=require('../assets/img/header/phone.png') alt='#')
+							| +380 99 646-61-71
+						a.phone_link(href='#') Заказать обратный звонок
+// Main
+main.main
+	.container
+		.row
+			.col-lg-6.col-md-7.wow.fadeInLeft
+				h1
+					span
+						| Остекление балконов "под ключ"
+						br
+					| за 6 000 ₴!
+				.main_features
+					.row
+						.col-sm-3.col-xs-6
+							.main_features_block
+								img(src=require('../assets/img/main/icons/quality.png') alt='')
+								p
+									| Высокое 
+									br
+									| качество
+						.col-sm-3.col-xs-6
+							.main_features_block
+								img(src=require('../assets/img/main/icons/time.png') alt='')
+								p
+									| Быстрый 
+									br
+									| монтаж
+						.col-sm-3.col-xs-6
+							.main_features_block
+								img.small_img(src=require('../assets/img/main/icons/guaranty.png') alt='')
+								p
+									| Гарантия 
+									br
+									| 3 года
+						.col-sm-3.col-xs-6
+							.main_features_block
+								img.small_img(src=require('../assets/img/main/icons/delivery.png') alt='')
+								p
+									| Вывоз 
+									br
+									| мусора
+			.col-lg-4.col-lg-offset-2.col-md-5.col-md-offset-0.col-sm-8.col-sm-offset-2.col-xs-12.wow.fadeInRight
+				form.form.main_form(action='#')
+					h2
+						| Запишитесь сегодня на 
+						br
+						span бесплатный замер
+					input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
+					input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+					button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
+					p.form_notice Ваши данные конфиденциальны
+// Glazing
+section.glazing
+	.container
+		.section_header
+			h2 Остекление балконов и лоджий
+			.section_header_sub
+		// Slider
+		.glazing_slider
+			.glazing_block.text-center.wow.fadeInUp
+				img(src=require('../assets/img/glazing/icons/1.png') alt='#')
+				a.tree_link
+					| Деревянное 
+					br
+					| остекление
+			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.1s')
+				img(src=require('../assets/img/glazing/icons/2.png') alt='#')
+				a.aluminum_link
+					| Алюминиевое 
+					br
+					| остекление
+			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.2s')
+				img(src=require('../assets/img/glazing/icons/3.png') alt='#')
+				a.plastic_link
+					| Остекление 
+					br
+					| пластиковыми 
+					br
+					| рамами
+			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.3s')
+				img(src=require('../assets/img/glazing/icons/4.png') alt='#')
+				a.french_link
+					| Французское 
+					br
+					| остекление 
+					br
+					| (панорамное)
+			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.4s')
+				img(src=require('../assets/img/glazing/icons/5.png') alt='#')
+				a.rise_link
+					| Остекление 
+					br
+					| с выносом
+		// Tree
+		.row.tree.glazing_content
+			.col-md-6.no-padding
+				.glazing_cold
+					h3 Холодное
+					img(src=require('../assets/img/glazing/img_cold.png') alt='#')
+					ul
+						li Конструктивная толщина 42-58 мм
+						li Остекление: полированное стекло (толщиной 4 - 5 мм)
+						li
+							| Теплоизоляция: 0,07 м
+							sup 2
+							|  * С/Вт
+						li Звукоизоляция: 20-27 дб
+				.glazing_price
+					p
+						| 1300 ₴ кв.м.
+						br
+						span под ключ с установкой
+					button.button.glazing_price_btn.text-uppercase.popup_calc_btn Рассчитать стоимость
+			.col-md-6.no-padding
+				.glazing_warm
+					h3 теплое
+					img(src=require('../assets/img/glazing/img_warm.png') alt='#')
+					ul
+						li Конструктивная толщина профиля: 58-78 м
+						li Остекление: однокамерные и двухкамерные стеклопакеты
+						li
+							| Теплоизоляция: 0,63 - 1,05 м
+							sup 2
+							|  * С/Вт
+						li Звукоизоляция: до 5 класса
+				.glazing_price
+					p
+						| 2000 ₴ кв.м.
+						br
+						span под ключ с установкой
+					button.button.glazing_price_btn.text-uppercase.popup_calc_btn Рассчитать стоимость
+		// /Tree
+		// Aluminum
+		.row.aluminum.glazing_content
+			.col-md-6.no-padding
+				.glazing_cold
+					h3 Холодное
+					img(src=require('../assets/img/glazing/aluminum/cold.jpg') alt='#')
+					ul
+						li Конструктивная толщина 40-50 мм
+						li Остекление: полированное стекло (толщиной 4 - 5 мм)
+						li
+							| Теплоизоляция: 0,07 м
+							sup 2
+							|  * С/Вт
+						li Звукоизоляция: 20-27 дб
+				.glazing_price
+					p
+						| 2000 ₴ кв.м.
+						br
+						span под ключ с установкой
+					button.button.glazing_price_btn.text-uppercase.popup_calc_btn Рассчитать стоимость
+			.col-md-6.no-padding
+				.glazing_warm
+					h3 теплое
+					img(src=require('../assets/img/glazing/aluminum/warm.jpg') alt='#')
+					ul
+						li Конструктивная толщина профиля: 60-68 м
+						li Остекление: однокамерные и двухкамерные стеклопакеты
+						li
+							| Теплоизоляция: 0,63 - 1,05 м
+							sup 2
+							|  * С/Вт
+						li Звукоизоляция: до 5 класса
+				.glazing_price
+					p
+						| 4000 ₴ кв.м.
+						br
+						span под ключ с установкой
+					button.button.glazing_price_btn.text-uppercase.popup_calc_btn Рассчитать стоимость
+		// /Aluminum
+		// Plastic
+		.row.plastic.glazing_content
+			.col-md-6.col-md-offset-3.no-padding
+				.glazing_warm
+					h3 теплое
+					img(src=require('../assets/img/glazing/plastic/warm.jpg') alt='#')
+					ul
+						li Конструктивная толщина профиля: 58-70 м
+						li Остекление: однокамерные и двухкамерные стеклопакеты
+						li
+							| Теплоизоляция: 0,63 - 1,05 м
+							sup 2
+							|  * С/Вт
+						li Звукоизоляция: до 5 класса
+				.glazing_price
+					p
+						| 5500 ₴кв.м.
+						br
+						span под ключ с установкой
+					button.button.glazing_price_btn.text-uppercase.popup_calc_btn Рассчитать стоимость
+		// /Plastic
+		// French
+		.row.french.glazing_content
+			.col-md-6.no-padding
+				.glazing_cold
+					h3 Пластик
+					img(src=require('../assets/img/glazing/french/plastic.jpg') alt='#')
+					ul
+						li Конструктивная толщина 58-70 мм
+						li Остекление: однокамерные и двухкамерные стеклопакеты
+						li
+							| Теплоизоляция: 0,63 - 1,05 м
+							sup 2
+							|  * С/Вт
+						li Звукоизоляция: до 5 класса
+				.glazing_price
+					p
+						| 2600 ₴ кв.м.
+						br
+						span под ключ с установкой
+					button.button.glazing_price_btn.text-uppercase.popup_calc_btn Рассчитать стоимость
+			.col-md-6.no-padding
+				.glazing_warm
+					h3 Алюминий
+					img(src=require('../assets/img/glazing/french/aluminum.jpg') alt='#')
+					ul
+						li Конструктивная толщина профиля: 60-68 мм
+						li Остекление: однокамерные и двухкамерные стеклопакеты
+						li
+							| Теплоизоляция: 0,63 - 1,05 м
+							sup 2
+							|  * С/Вт
+						li Звукоизоляция: до 5 класса
+				.glazing_price
+					p
+						| 4000 ₴ кв.м.
+						br
+						span под ключ с установкой
+					button.button.glazing_price_btn.text-uppercase.popup_calc_btn Рассчитать стоимость
+		// /French
+		// Rise
+		.row.rise.glazing_content
+			.col-md-6.no-padding
+				.glazing_cold
+					h3 Алюминий
+					img(src=require('../assets/img/glazing/rise/aluminum.jpg') alt='#')
+					ul
+						li Конструктивная толщина 40-50 мм
+						li Остекление: полированное стекло (толщиной 4 - 5 мм)
+						li
+							| Теплоизоляция: 0,07 м
+							sup 2
+							|  * С/Вт
+						li Звукоизоляция: 20-27 дб
+				.glazing_price
+					p
+						| 2000 ₴ кв.м.
+						br
+						span под ключ с установкой
+					button.button.glazing_price_btn.text-uppercase.popup_calc_btn Рассчитать стоимость
+			.col-md-6.no-padding
+				.glazing_warm
+					h3 Дерево
+					img(src=require('../assets/img/glazing/rise/tree.jpg') alt='#')
+					ul
+						li Конструктивная толщина профиля: 40-42 мм
+						li Остекление: полированное стекло (толщиной 4 мм)
+						li
+							| Теплоизоляция: 0,07 м
+							sup 2
+							|  * С/Вт
+						li Звукоизоляция: 20-27 дб
+				.glazing_price
+					p
+						| 4000 ₴ кв.м.
+						br
+						span под ключ с установкой
+					button.button.glazing_price_btn.text-uppercase.popup_calc_btn Рассчитать стоимость
+// /Rise
+// Decoration
+section.decoration
+	.container
+		.section_header
+			h2 ЗАКАЖИТЕ ОТДЕЛКУ БАЛКОНА СО СКИДКОЙ 60%!
+			.section_header_sub
+		// Slider
+		.decoration_slider
+			.decoration_item.wow.fadeInUp
+				.internal_link.no_click.after_click
+					a Внутренняя отделка
+			.decoration_item.wow.fadeInUp(data-wow-delay='0.1s')
+				.external_link.no_click
+					a Внешняя отделка
+			.decoration_item.wow.fadeInUp(data-wow-delay='0.2s')
+				.rising_link.no_click
+					a Выносное остекление
+			.decoration_item.wow.fadeInUp(data-wow-delay='0.3s')
+				.roof_link.no_click
+					a Крыша на балкон
+		.decoration_content
+			.row
+				// internal
+				.internal
+					.col-lg-3.col-md-4.col-md-offset-0.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2.no-padding
+						.decoration_img
+							img(src=require('../assets/img/decoration/decoration_img.png') alt='')
+					// Material
+					.col-lg-5.col-md-8.col-xs-12
+						.row
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/material/lining.png') alt='#')
+									h3 Вагонка
+									p
+										| 300 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/material/plastic.png') alt='#')
+									h3 Пластиковая вагонка
+									p
+										| 750 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/material/pvh.png') alt='#')
+									h3 ПВХ-панели
+									p
+										| 800 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/material/laminate.png') alt='#')
+									h3
+										| Настил пола 
+										br
+										| из ламината
+									p
+										| 1250 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/material/tree.png') alt='#')
+									h3
+										| Настил пола 
+										br
+										| из дерева
+									p
+										| 1650 ₴ кв.м.
+										span с материалом
+					.col-lg-4.col-lg-offset-0.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.col-xs-12
+						form.form.main_form.decoration_form(action='#')
+							h2
+								| Запишитесь сегодня на 
+								br
+								span бесплатный замер
+							input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
+							input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+							button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
+							p.form_notice Ваши данные конфиденциальны
+				// /internal
+				// external
+				.external
+					.col-lg-3.col-md-4.col-md-offset-0.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2.no-padding
+						.decoration_img
+							img(src=require('../assets/img/decoration/2/decoration2_img.png') alt='' style='margin-top: 3rem;')
+					// Material
+					.col-lg-5.col-md-8.col-xs-12
+						.row
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/2/metal.png') alt='#')
+									h3
+										| Металлический 
+										br
+										| сайдинг
+									p
+										| 600 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/2/plastic.png') alt='#')
+									h3
+										| Пластиковая 
+										br
+										| вагонка
+									p
+										| 750 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/2/profnastil.png') alt='#')
+									h3 Профнастил
+									p
+										| 800 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/2/tree.png') alt='#')
+									h3
+										| Деревянная 
+										br
+										| вагонка
+									p
+										| 1250 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/2/vinil.png') alt='#')
+									h3
+										| Виниловый 
+										br
+										| сайдинг
+									p
+										| 1650 ₴ кв.м.
+										span с материалом
+					.col-lg-4.col-lg-offset-0.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.col-xs-12
+						form.form.main_form.decoration_form(action='#')
+							h2
+								| Запишитесь сегодня на 
+								br
+								span бесплатный замер
+							input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
+							input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+							button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
+							p.form_notice Ваши данные конфиденциальны
+				// .external
+				// rising
+				.rising
+					.col-lg-3.col-md-4.col-md-offset-0.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2.no-padding
+						.decoration_img
+							img(src=require('../assets/img/decoration/3/decoration3_img.jpg') alt='' style='margin-top: 3rem;')
+					// Material
+					.col-lg-5.col-md-8.col-xs-12
+						.row
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/3/aluminum.png') alt='#')
+									h3
+										| Алюминиевый 
+										br
+										| профиль
+									p
+										| 600 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/3/bezram.png') alt='#')
+									h3
+										| Безрамное 
+										br
+										| остекление
+									p
+										| 750 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/3/pvh.png') alt='#')
+									h3
+										| ПВХ 
+										br
+										| профиль
+									p
+										| 800 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/3/tree.png') alt='#')
+									h3
+										| Деревянный 
+										br
+										| профиль
+									p
+										| 1250 ₴ кв.м.
+										span с материалом
+					.col-lg-4.col-lg-offset-0.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.col-xs-12
+						form.form.main_form.decoration_form(action='#')
+							h2
+								| Запишитесь сегодня на 
+								br
+								span бесплатный замер
+							input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
+							input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+							button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
+							p.form_notice Ваши данные конфиденциальны
+				// /rising
+				// roof
+				.roof
+					.col-lg-3.col-md-4.col-md-offset-0.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2.no-padding
+						.decoration_img
+							img(src=require('../assets/img/decoration/4/decoration4_img.png') alt='' style='margin-top: 3rem;')
+					// Material
+					.col-lg-5.col-md-8.col-xs-12
+						.row
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/4/gofrolist.png') alt='#')
+									h3 Гофролист
+									p
+										| 600 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/4/metallocherepitsa.png') alt='#')
+									h3 Металлочерепица
+									p
+										| 750 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/4/ondulin.png') alt='#')
+									h3 Ондулин
+									p
+										| 800 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/4/polikarbonat.png') alt='#')
+									h3 Поликарбонат
+									p
+										| 1250 ₴ кв.м.
+										span с материалом
+							.col-lg-4.col-md-4.col-sm-4.col-xs-6
+								.decoration_content_material.text-center
+									img(src=require('../assets/img/decoration/4/steklopaket.png') alt='#')
+									h3 Стеклопакет
+									p
+										| 1650 ₴ кв.м.
+										span с материалом
+					.col-lg-4.col-lg-offset-0.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.col-xs-12
+						form.form.main_form.decoration_form(action='#')
+							h2
+								| Запишитесь сегодня на 
+								br
+								span бесплатный замер
+							input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
+							input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+							button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
+							p.form_notice Ваши данные конфиденциальны
+				// /roof
+				// row
+				// decoration_content
+				// container
+.overlay
+// Our works
+section.works
+	.container
+		.section_header
+			h2 Наши работы
+			.section_header_sub
+		.row
+			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn
+				a(href=require('../assets/img/our_works/big_img/1.png'))
+					img.preview(src=require('../assets/img/our_works/1.png') alt='window')
+			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.1s')
+				a(href=require('../assets/img/our_works/big_img/2.png'))
+					img.preview(src=require('../assets/img/our_works/2.png') alt='window')
+			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.2s')
+				a(href=require('../assets/img/our_works/big_img/3.png'))
+					img.preview(src=require('../assets/img/our_works/3.png') alt='window')
+			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.3s')
+				a(href=require('../assets/img/our_works/big_img/4.png'))
+					img.preview(src=require('../assets/img/our_works/4.png') alt='window')
+			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.4s')
+				a(href=require('../assets/img/our_works/big_img/5.png'))
+					img.preview(src=require('../assets/img/our_works/5.png') alt='window')
+			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.5s')
+				a(href=require('../assets/img/our_works/big_img/6.png'))
+					img.preview(src=require('../assets/img/our_works/6.png') alt='window')
+			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.6s')
+				a(href=require('../assets/img/our_works/big_img/7.png'))
+					img.preview(src=require('../assets/img/our_works/7.png') alt='window')
+			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.7s')
+				a(href=require('../assets/img/our_works/big_img/8.png'))
+					img.preview(src=require('../assets/img/our_works/8.png') alt='window')
+// Guarantees
+section.guarantees
+	.container
+		.section_header.guarantees_header
+			h2 мы гарантируем вам
+			.section_header_sub.guarantees_header_sub
+		.row
+			.col-md-4.col-sm-6.col-xs-6.text-center.wow.fadeInUp
+				.guarantees_block
+					img(src=require('../assets/img/guarantees/1.png') alt='#')
+					h3 Высокое качество
+			.col-md-4.col-sm-6.col-xs-6.text-center.wow.fadeInUp(data-wow-delay='0.1s')
+				.guarantees_block
+					img(src=require('../assets/img/guarantees/2.png') alt='')
+					h3
+						| Выполнение работ 
+						br
+						| под ключ
+			.col-md-4.col-sm-6.col-xs-6.text-center.wow.fadeInUp(data-wow-delay='0.2s')
+				.guarantees_block
+					img(src=require('../assets/img/guarantees/3.png') alt='')
+					h3
+						| Монтаж в короткие 
+						br
+						| сроки
+			.col-md-4.col-sm-6.col-xs-6.text-center.wow.fadeInUp(data-wow-delay='0.3s')
+				.guarantees_block
+					img(src=require('../assets/img/guarantees/4.png') alt='')
+					h3
+						| Цены 
+						br
+						| от производителя
+			.col-md-4.col-sm-6.col-xs-6.text-center.wow.fadeInUp(data-wow-delay='0.4s')
+				.guarantees_block
+					img(src=require('../assets/img/guarantees/5.png') alt='')
+					h3
+						| Бесплатный замер 
+						br
+						| и консультацию
+			.col-md-4.col-sm-6.col-xs-6.text-center.wow.fadeInUp(data-wow-delay='0.5s')
+				.guarantees_block
+					img(src=require('../assets/img/guarantees/6.png') alt='')
+					h3
+						| Тепло и уют 
+						br
+						| на балконе
+// Payment
+section.payment
+	.container
+		.section_header.payment_header
+			h2 Вы можете оплатить наши услуги:
+		.row
+			.col-md-4.col-sm-4.wow.bounceIn
+				.payment_item
+					.payment_img
+						img(src=require('../assets/img/payment/wallet.png') alt='')
+					h3 Наличными
+			.col-md-4.col-sm-4.wow.bounceIn(data-wow-delay='0.3s')
+				.payment_item
+					.payment_img
+						img(src=require('../assets/img/payment/credit-card.png') alt='')
+					h3 Банковской картой
+			.col-md-4.col-sm-4.wow.bounceIn(data-wow-delay='0.6s')
+				.payment_item
+					.payment_img
+						img(src=require('../assets/img/payment/museum.png') alt='')
+					h3 Безналичный расчет
+// Sale
+section.sale
+	.container
+		.row
+			.col-lg-5.col-md-6.wow.fadeInLeft
+				h2.sale_title Акция - 60%
+				p.sale_subtitle Успей сэкономить на остеклении! Только до 18 декабря!
+				#timer.timer1
+					p
+					h4 ДО ЗАВЕРШЕНИЯ АКЦИИ:
+					p
+					.container1
+						.numbers1
+							div
+								span#days 08
+							.desrciption1 Дней
+						.numbers1
+							div
+								span#hours 18
+							.desrciption1 Часов
+						.numbers1
+							div
+								span#minutes 33
+							.desrciption1 Минут
+						.numbers1
+							div
+								span#seconds 44
+							.desrciption1 Секунд
+			.col-lg-4.col-lg-offset-3.col-md-5.col-md-offset-1.col-sm-8.col-sm-offset-2.wow.fadeInRight
+				form.form.main_form(action='#')
+					h2
+						| Запишитесь сегодня на 
+						br
+						span бесплатный замер
+					input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
+					input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+					button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
+					p.form_notice Ваши данные конфиденциальны
+// Contacts
+section.contacts
+	.container
+		.section_header
+			h2 Как нас найти
+			.section_header_sub
+		.row
+			.col-lg-6.col-md-6.wow.fadeInLeft
+				iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.8341427946252!2d30.450090227741647!3d50.42865170466156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ceaff528b7eb%3A0xc30f26bdc35c9f69!2z0KTQhtCd0KbQldCd0KLQoA!5e0!3m2!1suk!2sge!4v1705945817513!5m2!1suk!2sge" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+			.col-lg-5.col-lg-offset-1.col-md-6.col-md-offset-0.wow.fadeInRight
+				.contacts_info
+					h3 Юридический адрес:
+					p ТОВ «ИРВАС», провулок Очаківський ,будинок 5/6, кабінет 105, вулиця Очаківська, Київ, Україна, 03151
+					h3 Фактический адрес:
+					p ТОВ «ИРВАС», провулок Очаківський ,будинок 5/6, кабінет 105, вулиця Очаківська, Київ, Україна, 03151
+					h3 Телефон:
+					p
+						| +380 99 646-61- 71 
+						span (многоканальный)
+					h3 E-mail:
+					a(href='#') info@mail.com
+					h3 Режим работы:
+					p 9:00 - 18:00 без выходных
+// Feedback
+section.feedback
+	.container
+		.feedback_block.text-center
+			h3 Остались вопросы?
+			a.phone_link(href='#') Спросите у нашего специалиста!
+// Footer
+footer.footer
+	.container
+		.row
+			.col-sm-4.col-sm-push-8.col-xs-12
+				.contacts
+					a.phone(href='#') +380 99 646-61-71
+					a.email(href='#') info@mail.com
+			.col-sm-4.col-xs-12
+				.logo
+					img(src=require('../assets/img/header/logo.png') alt='#')
+			.col-sm-4.col-sm-pull-8.col-xs-12
+				.copyright
+// Modals
+// Request a call
+.popup
+	.popup_dialog
+		.popup_content.text-center.jsModalContent
+			button.popup_close(type='button')
+				strong(class = 'jsModalClose') ×
+			.popup_form
+				form.form(action='#')
+					h2
+						| Введите ваши данные 
+						br
+						| и нажмите заказать звонок
+					input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
+					input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+					button.text-uppercase.btn-block.button(name='submit' type='submit') Заказать звонок
+					p.form_notice Перезвоним в течение 10 минут
+// Request an engineer
+.popup_engineer
+	.popup_dialog
+		.popup_content.text-center.jsModalContent
+			button.popup_close(type='button')
+				strong(class = 'jsModalClose') ×
+			.popup_form
+				form.form(action='#')
+					h2
+						| Запишитесь сегодня на 
+						br
+						span бесплатный замер
+					input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
+					input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+					button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
+					p.form_notice Ваши данные конфиденциальны
+// Calculator
+.popup_calc
+	.popup_dialog
+		.popup_calc_content.text-center.jsModalContent
+			button.popup_calc_close(type='button')
+				strong(class = 'jsModalClose') ×
+			h2 Калькулятор
+			h3
+				| Выберите форму балкона 
+				br
+				| и укажите размеры
+			.balcon_icons
+				span.balcon_icons_img
+					img(src=require('../assets/img/modal_calc/balkon/ba_01.png') alt='Тип1')
+				span.balcon_icons_img
+					img(src=require('../assets/img/modal_calc/balkon/ba_02.png') alt='Тип2')
+				span.balcon_icons_img
+					img(src=require('../assets/img/modal_calc/balkon/ba_03.png') alt='Тип3')
+				span.balcon_icons_img
+					img(src=require('../assets/img/modal_calc/balkon/ba_04.png') alt='Тип4')
+			.big_img.text-center
+				img(src=require('../assets/img/modal_calc/balkon/type1.png') alt='Тип1')
+				img(src=require('../assets/img/modal_calc/balkon/type2.png') alt='Тип2')
+				img(src=require('../assets/img/modal_calc/balkon/type3.png') alt='Тип3')
+				img(src=require('../assets/img/modal_calc/balkon/type4.png') alt='Тип4')
+			input#width.form-control(type='text' placeholder='Ширина' required='')
+			label(for='width') мм
+			.multiplication
+				strong(class = 'jsModalClose') ×
+			input#height.form-control(type='text' placeholder='Высота' required='')
+			label(for='height') мм
+			button.button.popup_calc_button Далее
+.popup_calc_profile
+	.popup_dialog
+		.popup_calc_profile_content.text-center.jsModalContent
+			button.popup_calc_profile_close(type='button')
+				strong(class = 'jsModalClose') ×
+			h2 Калькулятор
+			h3
+				| Выберите тип остекления 
+				br
+				| и его профиль
+			select#view_type.form-control(name='view')
+				option(value='tree') Деревянное остекление
+				option(value='aluminum') Алюминиевое остекление
+				option(value='plastic') Остекление пластиковыми рамами
+				option(value='french') Панорамное остекление
+				option(value='overhang') Остекление с выносом
+			img(src=require('../assets/img/modal_calc/icon_cold.png') alt='')
+			label
+				input.checkbox(type='radio' name='checkbox-test' data-value='cold')
+				span#cold.checkbox-custom
+				span.label Холодное
+			img(src=require('../assets/img/modal_calc/icon_warm.png') alt='')
+			label
+				input.checkbox(type='radio' name='checkbox-test' data-value='warm')
+				span#warm.checkbox-custom
+				span.label Теплое
+			button.button.popup_calc_profile_button Далее
+.popup_calc_end
+	.popup_dialog
+		.popup_content.text-center.jsModalContent
+			button.popup_calc_end_close(type='button')
+				strong(class = 'jsModalClose') ×
+			.popup_form
+				form.form(action='#')
+					h2
+						| Спасибо за обращение! 
+						br
+						| Оставьте свои данные
+					input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
+					input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+					button.text-uppercase.btn-block.button(name='submit' type='submit') Рассчитать стоимость
+					p.form_notice Перезвоним в течение 10 минут
