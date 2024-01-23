@@ -1,12 +1,12 @@
 import './modules/slider';
 import { Modals } from './modules/modals';
 import { ModalSystem } from './modules/modalSystem';
+import { popupCalcStart, popupCalcValidate } from './modules/popupCalc';
+import { popupCalcProfileStart, popupCalcProfileValidate } from './modules/popupCalcProfile';
 
-debugger;
 const modals = new Modals({
     'popup': 'phone_link',
     'popup_engineer': 'popup_engineer_btn',
-    'popup_calc': 'popup_calc_btn'
 }, 'activeModal', 'jsModalContent', 'jsModalClose');
 
 const calculationModal = new ModalSystem({
@@ -15,39 +15,29 @@ const calculationModal = new ModalSystem({
     contentSubclass: "jsModalContent",
     closeBtnClass: "jsModalClose",
     modalsChain: ["popup_calc", "popup_calc_profile", "popup_calc_end"],
+    warningMessageClass: 'warningMessage',
     openFunctions: [
+        (data) => {
+            popupCalcStart(data);
+        },
+        (data) => {
+            popupCalcProfileStart(data);
+        },
         () => {
-            const balconIcons = document.querySelectorAll('.balcon_icons_img');
-            
-            balconIcons.forEach(icon => {
-                icon.addEventListener('mouseenter', e => {
-                    icon.classList.add('do_image_more');
-                });
-
-                icon.addEventListener('mouseleave', e => {
-                    icon.classList.remove('do_image_more');
-                });
-
-                icon.addEventListener('click', e => {
-                    const bigImgElem = document.querySelector('.big_img');
-                    
-                    if(bigImgElem.querySelector('.activeImage')) {
-                        bigImgElem.querySelector('.activeImage').classList.remove('activeImage');
-                    }
-
-                    let index;
-                    if(e.target.matches('.balcon_icons_img')) {
-                        index = Array.prototype.indexOf.call(balconIcons, e.target);
-                    } else {
-                        index = Array.prototype.indexOf.call(balconIcons, e.target.parentElement);
-                    }
-
-                    bigImgElem.children[index].classList.add('activeImage');
-                    this.data.formId = index;
-                });
-            });
+            console.log('bam');
         }
     ],
-    nextChainFunctions: [],
-    nextBtnSubClass: "_button"
+    nextChainFunctions: [
+        (data) => {
+            return popupCalcValidate(data);
+        },
+        (data) => {
+            return popupCalcProfileValidate(data);
+        },
+        () => {
+            console.log('bim');
+        }
+    ],
+    nextBtnSubClass: "_button",
+    nextBtnId: 'next',
 });

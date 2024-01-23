@@ -74,7 +74,7 @@ main.main
 						br
 						span бесплатный замер
 					input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
-					input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+					input.form-control.form_input(name='user_phone' required='' type='number' placeholder='Введите телефон')
 					button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
 					p.form_notice Ваши данные конфиденциальны
 // Glazing
@@ -374,7 +374,7 @@ section.decoration
 								br
 								span бесплатный замер
 							input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
-							input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+							input.form-control.form_input(name='user_phone' required='' type='number' placeholder='Введите телефон')
 							button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
 							p.form_notice Ваши данные конфиденциальны
 				// /internal
@@ -440,7 +440,7 @@ section.decoration
 								br
 								span бесплатный замер
 							input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
-							input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+							input.form-control.form_input(name='user_phone' required='' type='number' placeholder='Введите телефон')
 							button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
 							p.form_notice Ваши данные конфиденциальны
 				// .external
@@ -499,7 +499,7 @@ section.decoration
 								br
 								span бесплатный замер
 							input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
-							input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+							input.form-control.form_input(name='user_phone' required='' type='number' placeholder='Введите телефон')
 							button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
 							p.form_notice Ваши данные конфиденциальны
 				// /rising
@@ -553,7 +553,7 @@ section.decoration
 								br
 								span бесплатный замер
 							input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
-							input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+							input.form-control.form_input(name='user_phone' required='' type='number' placeholder='Введите телефон')
 							button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
 							p.form_notice Ваши данные конфиденциальны
 				// /roof
@@ -694,7 +694,7 @@ section.sale
 						br
 						span бесплатный замер
 					input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
-					input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+					input.form-control.form_input(name='user_phone' required='' type='number' placeholder='Введите телефон')
 					button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
 					p.form_notice Ваши данные конфиденциальны
 // Contacts
@@ -753,7 +753,7 @@ footer.footer
 						br
 						| и нажмите заказать звонок
 					input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
-					input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+					input.form-control.form_input(name='user_phone' required='' type='number' placeholder='Введите телефон')
 					button.text-uppercase.btn-block.button(name='submit' type='submit') Заказать звонок
 					p.form_notice Перезвоним в течение 10 минут
 // Request an engineer
@@ -769,7 +769,7 @@ footer.footer
 						br
 						span бесплатный замер
 					input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
-					input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+					input.form-control.form_input(name='user_phone' required='' type='number' placeholder='Введите телефон')
 					button.text-uppercase.btn-block.button(name='submit' type='submit') Вызвать замерщика!
 					p.form_notice Ваши данные конфиденциальны
 // Calculator
@@ -797,13 +797,13 @@ footer.footer
 				img(src=require('../assets/img/modal_calc/balkon/type2.png') alt='Тип2')
 				img(src=require('../assets/img/modal_calc/balkon/type3.png') alt='Тип3')
 				img(src=require('../assets/img/modal_calc/balkon/type4.png') alt='Тип4')
-			input#width.form-control(type='text' placeholder='Ширина' required='')
+			input#width.form-control(type='number' placeholder='Ширина' required='')
 			label(for='width') мм
 			.multiplication
 				strong(class = 'jsModalClose') ×
-			input#height.form-control(type='text' placeholder='Высота' required='')
+			input#height.form-control(type='number' placeholder='Высота' required='')
 			label(for='height') мм
-			button.button.popup_calc_button Далее
+			button(id='next').button.popup_calc_button Далее
 .popup_calc_profile
 	.popup_dialog
 		.popup_calc_profile_content.text-center.jsModalContent
@@ -843,6 +843,6 @@ footer.footer
 						br
 						| Оставьте свои данные
 					input.form-control.form_input(name='user_name' required='' type='text' placeholder='Введите ваше имя')
-					input.form-control.form_input(name='user_phone' required='' type='text' placeholder='Введите телефон')
+					input.form-control.form_input(name='user_phone' required='' type='number' placeholder='Введите телефон')
 					button.text-uppercase.btn-block.button(name='submit' type='submit') Рассчитать стоимость
 					p.form_notice Перезвоним в течение 10 минут

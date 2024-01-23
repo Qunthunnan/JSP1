@@ -1105,6 +1105,16 @@ button:focus, input:focus, textarea:focus {
     display: inline-block;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 /*Media*/
 @media (max-width: 1400px) {
     .main {
@@ -1761,6 +1771,11 @@ button:focus, input:focus, textarea:focus {
     .popup_calc_profile_button {
         padding: 1rem 5rem;
     }
+}
+
+.warningMessage {
+    display: block;
+    margin: 10px 0px 0px 0px;
 }
 
 /* small devices, tablets */
