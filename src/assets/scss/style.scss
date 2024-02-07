@@ -42,11 +42,15 @@ button:focus, input:focus, textarea:focus {
     padding: 0 !important;
 }
 
+.popup_form {
+    border-radius: inherit;
+}
+
 .form {
     /*margin-top: 2rem;*/
     padding: 2rem 5rem;
     text-align: center;
-    border-radius: 1rem;
+    border-radius: inherit;
     background-color: #ffffff;
 
     h2 {
