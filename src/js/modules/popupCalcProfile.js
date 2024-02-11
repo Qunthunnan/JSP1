@@ -28,7 +28,7 @@ export function popupCalcProfileValidate (data) {
     const checkboxes = document.querySelectorAll('[name="checkbox-test"]');
     profileType.value = profileType.children[0].value;
     checkboxes.forEach(checkbox => {
-        checkbox.value = '';
+        checkbox.checked = false;
     });
 
     return true;

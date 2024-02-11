@@ -58,16 +58,15 @@ export function popupCalcValidate (data) {
         return errorMessages.sizesFormat;
     }
 
-    if(!data.formId) {
+    if(data.formId === undefined) {
         return errorMessages.iconsBalcon;
     }
 
     const widthField = document.querySelector('#width');
     const heightField = document.querySelector('#height');
-    const bigImgElem = document.querySelector('.big_img');
+    const bigImgElem = document.querySelector('.activeImage');
     widthField.value = '';
     heightField.value = '';
-    bigImgElem.remove();
-
+    bigImgElem.classList.remove('activeImage');
     return true;
 }

@@ -98,6 +98,8 @@ button:focus, input:focus, textarea:focus {
 }
 
 .button {
+    position: relative;
+    overflow: hidden;
     padding: 2.5rem 0rem;
     font-size: 1.7rem;
     font-family: 'Open Sans', sans-serif;
@@ -112,6 +114,20 @@ button:focus, input:focus, textarea:focus {
 
     &:hover {
         cursor: pointer;
+    }
+}
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 500ms linear;
+    background-color: rgba(201, 201, 201, 0.481);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
     }
 }
 
@@ -1780,6 +1796,17 @@ input[type=number] {
 .warningMessage {
     display: block;
     margin: 10px 0px 0px 0px;
+}
+
+.form_error {
+    font-weight: 700;
+    font-size: 12px;
+    color: #454545;
+}
+
+.popup_sended .popup_content{
+    padding: 50px 30px;
+    font-weight: 700;
 }
 
 /* small devices, tablets */

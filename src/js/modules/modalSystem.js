@@ -23,8 +23,8 @@ export class ModalSystem extends Modals {
             this.createLink(classesStructure);
         }
 
-        for(let i in modalsChain) {
-            if(+i === modalsChain.length - 1) {
+        for(let i in this.modalsChain) {
+            if(+i === this.modalsChain.length - 1) {
                 this.isOpened.push(true);
             } else {
                 this.isOpened.push(false);
@@ -47,7 +47,10 @@ export class ModalSystem extends Modals {
             const nextBtn = document.querySelector(`.${this.modalsChain[this.curentModalId]}${this.nextBtnSubClass}`);
 
             nextBtn.addEventListener('click', e =>{
-                this.validateData();
+                if(e.currentTarget == e.target && !e.key) {
+                    e.key = true;
+                    this.validateData();
+                }
             });
             this.openFunctions[this.curentModalId](this.data);
             this.isOpened[this.curentModalId] = true;
@@ -56,12 +59,17 @@ export class ModalSystem extends Modals {
 
     validateData() {
         const response = this.nextChainFunctions[this.curentModalId](this.data);
+        const modalElement = document.querySelector(`.${this.modalsChain[this.curentModalId]} .${this.contentSubclass}`);
         if(response === true) {
+            const warningMessage = modalElement.querySelector(`.${this.warningMessageClass}`);
+            if(warningMessage) {
+                warningMessage.remove();
+            }
             this.closeModal(this.modalsChain[this.curentModalId]);
             this.curentModalId++;
             this.showSystem();
         } else {
-            const modalElement = document.querySelector(`.${this.modalsChain[this.curentModalId]} .${this.contentSubclass}`);
+            this.shake(this.modalsChain[this.curentModalId]);
             
             if(modalElement.querySelector(`.${this.warningMessageClass}`)) {
                 modalElement.querySelector(`.${this.warningMessageClass}`).textContent = response;
@@ -73,6 +81,21 @@ export class ModalSystem extends Modals {
                 modalElement.append(warningMessage);
             }
         }
+    }
+
+    resetSystem() {
+        this.curentModalId = 0;
+        this.isOpened = [];
+
+        for(let i in this.modalsChain) {
+            if(+i === this.modalsChain.length - 1) {
+                this.isOpened.push(true);
+            } else {
+                this.isOpened.push(false);
+            }
+        }
+
+        this.data = {};
     }
 }
 
