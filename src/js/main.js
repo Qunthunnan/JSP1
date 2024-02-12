@@ -5,6 +5,9 @@ import { popupCalcStart, popupCalcValidate } from './modules/popupCalc';
 import { popupCalcProfileStart, popupCalcProfileValidate } from './modules/popupCalcProfile';
 import ripples from './modules/btnsAnim';
 import { Forms } from './modules/forms';
+import { SliderTabs } from './modules/tabs';
+import { Galery } from './modules/galery';
+import timer from './modules/timer';
 
 const modals = new Modals({
     'popup': 'phone_link',
@@ -50,5 +53,16 @@ const forms = new Forms('form', [
     'user_name',
     'user_phone'
 ], 'form_input', 'popup_sended');
+
+const tabGlazzing = new SliderTabs('glazing_block', 'glazing_tabs', 'glazing_content');
+const balconGlazzing = new SliderTabs('jsBalconTab', 'jsTabsBalcon', 'jsBalconTabContent', 'after_click');
+
+const galery = new Galery('jsGalery', 'jsGaleryImage');
+
+timer(new Date('2024-02-25T13:00:00+00:00'), 'timer1', 'deadlineLabel');
+
+setTimeout(() => {
+    modals.showModal('popup');
+}, 60000);
 
 export {modals, calculationModal}

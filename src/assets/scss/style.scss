@@ -1805,6 +1805,8 @@ input[type=number] {
 }
 
 .popup_sended .popup_content{
+    display: flex;
+    justify-content: center;
     padding: 50px 30px;
     font-weight: 700;
 }

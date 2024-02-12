@@ -11,5 +11,5 @@ gulp.task("copy-php", () => {
 });
 
 gulp.task("watch", () => {
-    gulp.watch('./src/**/*.php', gulp.parallel('copy-php'));
+    gulp.watch('./src/**/*', gulp.parallel('copy-php'));
 });

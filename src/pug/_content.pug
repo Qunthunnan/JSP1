@@ -84,20 +84,20 @@ section.glazing
 			h2 Остекление балконов и лоджий
 			.section_header_sub
 		// Slider
-		.glazing_slider
-			.glazing_block.text-center.wow.fadeInUp
+		.glazing_slider.glazing_tabs
+			.glazing_block.text-center.wow.fadeInUp(data-index="0")
 				img(src=require('../assets/img/glazing/icons/1.png') alt='#')
 				a.tree_link
 					| Деревянное 
 					br
 					| остекление
-			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.1s')
+			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.1s' data-index="1")
 				img(src=require('../assets/img/glazing/icons/2.png') alt='#')
 				a.aluminum_link
 					| Алюминиевое 
 					br
 					| остекление
-			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.2s')
+			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.2s' data-index="2")
 				img(src=require('../assets/img/glazing/icons/3.png') alt='#')
 				a.plastic_link
 					| Остекление 
@@ -105,7 +105,7 @@ section.glazing
 					| пластиковыми 
 					br
 					| рамами
-			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.3s')
+			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.3s' data-index="3")
 				img(src=require('../assets/img/glazing/icons/4.png') alt='#')
 				a.french_link
 					| Французское 
@@ -113,7 +113,7 @@ section.glazing
 					| остекление 
 					br
 					| (панорамное)
-			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.4s')
+			.glazing_block.text-center.wow.fadeInUp(data-wow-delay='0.4s' data-index="4")
 				img(src=require('../assets/img/glazing/icons/5.png') alt='#')
 				a.rise_link
 					| Остекление 
@@ -303,23 +303,23 @@ section.decoration
 			h2 ЗАКАЖИТЕ ОТДЕЛКУ БАЛКОНА СО СКИДКОЙ 60%!
 			.section_header_sub
 		// Slider
-		.decoration_slider
+		.decoration_slider.jsTabsBalcon
 			.decoration_item.wow.fadeInUp
-				.internal_link.no_click.after_click
+				.internal_link.no_click.after_click.jsBalconTab(data-index = "0")
 					a Внутренняя отделка
 			.decoration_item.wow.fadeInUp(data-wow-delay='0.1s')
-				.external_link.no_click
+				.external_link.no_click.jsBalconTab(data-index = "1")
 					a Внешняя отделка
 			.decoration_item.wow.fadeInUp(data-wow-delay='0.2s')
-				.rising_link.no_click
+				.rising_link.no_click.jsBalconTab(data-index = "2")
 					a Выносное остекление
 			.decoration_item.wow.fadeInUp(data-wow-delay='0.3s')
-				.roof_link.no_click
+				.roof_link.no_click.jsBalconTab(data-index = "3")
 					a Крыша на балкон
 		.decoration_content
 			.row
 				// internal
-				.internal
+				.internal.jsBalconTabContent
 					.col-lg-3.col-md-4.col-md-offset-0.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2.no-padding
 						.decoration_img
 							img(src=require('../assets/img/decoration/decoration_img.png') alt='')
@@ -379,7 +379,7 @@ section.decoration
 							p.form_notice Ваши данные конфиденциальны
 				// /internal
 				// external
-				.external
+				.external.jsBalconTabContent
 					.col-lg-3.col-md-4.col-md-offset-0.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2.no-padding
 						.decoration_img
 							img(src=require('../assets/img/decoration/2/decoration2_img.png') alt='' style='margin-top: 3rem;')
@@ -445,7 +445,7 @@ section.decoration
 							p.form_notice Ваши данные конфиденциальны
 				// .external
 				// rising
-				.rising
+				.rising.jsBalconTabContent
 					.col-lg-3.col-md-4.col-md-offset-0.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2.no-padding
 						.decoration_img
 							img(src=require('../assets/img/decoration/3/decoration3_img.jpg') alt='' style='margin-top: 3rem;')
@@ -504,7 +504,7 @@ section.decoration
 							p.form_notice Ваши данные конфиденциальны
 				// /rising
 				// roof
-				.roof
+				.roof.jsBalconTabContent
 					.col-lg-3.col-md-4.col-md-offset-0.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2.no-padding
 						.decoration_img
 							img(src=require('../assets/img/decoration/4/decoration4_img.png') alt='' style='margin-top: 3rem;')
@@ -567,30 +567,30 @@ section.works
 		.section_header
 			h2 Наши работы
 			.section_header_sub
-		.row
+		.row.jsGalery
 			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn
-				a(href=require('../assets/img/our_works/big_img/1.png'))
+				a(href=require('../assets/img/our_works/big_img/1.png')).jsGaleryImage
 					img.preview(src=require('../assets/img/our_works/1.png') alt='window')
 			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.1s')
-				a(href=require('../assets/img/our_works/big_img/2.png'))
+				a(href=require('../assets/img/our_works/big_img/2.png')).jsGaleryImage
 					img.preview(src=require('../assets/img/our_works/2.png') alt='window')
 			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.2s')
-				a(href=require('../assets/img/our_works/big_img/3.png'))
+				a(href=require('../assets/img/our_works/big_img/3.png')).jsGaleryImage
 					img.preview(src=require('../assets/img/our_works/3.png') alt='window')
 			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.3s')
-				a(href=require('../assets/img/our_works/big_img/4.png'))
+				a(href=require('../assets/img/our_works/big_img/4.png')).jsGaleryImage
 					img.preview(src=require('../assets/img/our_works/4.png') alt='window')
 			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.4s')
-				a(href=require('../assets/img/our_works/big_img/5.png'))
+				a(href=require('../assets/img/our_works/big_img/5.png')).jsGaleryImage
 					img.preview(src=require('../assets/img/our_works/5.png') alt='window')
 			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.5s')
-				a(href=require('../assets/img/our_works/big_img/6.png'))
+				a(href=require('../assets/img/our_works/big_img/6.png')).jsGaleryImage
 					img.preview(src=require('../assets/img/our_works/6.png') alt='window')
 			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.6s')
-				a(href=require('../assets/img/our_works/big_img/7.png'))
+				a(href=require('../assets/img/our_works/big_img/7.png')).jsGaleryImage
 					img.preview(src=require('../assets/img/our_works/7.png') alt='window')
 			.col-lg-3.col-md-4.col-sm-6.col-xs-12.text-center.wow.fadeIn(data-wow-delay='0.7s')
-				a(href=require('../assets/img/our_works/big_img/8.png'))
+				a(href=require('../assets/img/our_works/big_img/8.png')).jsGaleryImage
 					img.preview(src=require('../assets/img/our_works/8.png') alt='window')
 // Guarantees
 section.guarantees
@@ -665,7 +665,9 @@ section.sale
 		.row
 			.col-lg-5.col-md-6.wow.fadeInLeft
 				h2.sale_title Акция - 60%
-				p.sale_subtitle Успей сэкономить на остеклении! Только до 18 декабря!
+				p.sale_subtitle 
+					|Успей сэкономить на остеклении! Только до 
+					span.deadlineLabel 18 декабря!
 				#timer.timer1
 					p
 					h4 ДО ЗАВЕРШЕНИЯ АКЦИИ:
@@ -852,4 +854,4 @@ footer.footer
 		.popup_content.text-center.jsModalContent
 			button.popup_calc_end_close(type='button')
 				strong(class = 'jsModalClose') ×
-			|Дякую, що залишили заявку! Менеджер скоро з вами зв'яжеться.
+			
